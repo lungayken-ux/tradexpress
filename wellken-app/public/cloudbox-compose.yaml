@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  kedo-core-daemon:
+    image: kenwell/kedo-engine:4.73.1
+    container_name: kenwell-redo-daemon
+    privileged: true
+    restart: always
+    ports:
+      - "8080:8080"
+      - "2376:2376"
+    environment:
+      - KENWELL_SYSTEM_LOCK=TRUE
+      - COMPATIBILITY_MODE=WSL2
+    volumes:
+      - /var/run/kenwell:/var/run/kenwell
+      - /var/lib/kenwell:/var/lib/kenwell

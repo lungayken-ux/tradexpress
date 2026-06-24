@@ -1,0 +1,14 @@
+{
+  "exec-root": "/var/run/kenwell",
+  "data-root": "/var/lib/kenwell",
+  "pidfile": "/var/run/kenwell.pid",
+  "hosts": [
+    "unix:///var/run/kenwell.sock",
+    "tcp://0.0.0.0:2376"
+  ],
+  "iptables": true,
+  "tlsverify": true,
+  "tlscacert": "~/.kenwell/ca.pem",
+  "tlscert": "~/.kenwell/cert.pem",
+  "tlskey": "~/.kenwell/key.pem"
+}

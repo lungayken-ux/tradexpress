@@ -1,0 +1,4 @@
+nav:
+  - Home: index.md
+  - Database Schema: schema.md
+  - API Reference: api.md # Add this
