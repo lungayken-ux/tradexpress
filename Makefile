@@ -1,12 +1,8 @@
-# Makefile
-.PHONY: sync-db build-docs deploy
+# Add this to your Makefile
+run-dashboard:
+	@echo "Launching Dashboard..."
+	./venv/bin/streamlit run src/dashboard.py
 
-sync-db:
-	@echo "Syncing Database Schema..."
-	python3 scripts/generate_schema.py > docs/schema.md
-
-build-docs:
-	mkdocs build --clean
-
-deploy: sync-db build-docs
-	@echo "Pipeline complete: Database synced and documentation built."
+clean-db:
+	rm wellken.db
+	@echo "Database wiped."

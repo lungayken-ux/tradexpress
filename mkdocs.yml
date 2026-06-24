@@ -1,4 +1,12 @@
+site_name: Wellken Technical Documentation
+theme:
+  name: material
+
 nav:
   - Home: index.md
-  - Database Schema: schema.md
-  - API Reference: api.md # Add this
+  - Tutorials:
+      - Getting Started: tutorials/getting-started.md
+  - Reference:
+      - Python API: reference/python_api.md
+      - Frontend Components: reference/frontend.md
+  - Architecture: explanations/architecture.md
